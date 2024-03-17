@@ -7,9 +7,9 @@
 - [Demo day slide](https://github.com/MyoungchulK/Sound_To_Symphony_LeWgon/blob/main/slide/Sound_to_symphony_Le_Wagon.pdf) 
 - [App home](https://sound-to-symphony-hggkk6gcyupalttasetpiw.streamlit.app/)
 
-[sc1](https://github.com/MyoungchulK/Sound_To_Symphony_LeWgon/blob/main/slide/sc1.png)
-[sc2](https://github.com/MyoungchulK/Sound_To_Symphony_LeWgon/blob/main/slide/sc2.png)
-[sc3](https://github.com/MyoungchulK/Sound_To_Symphony_LeWgon/blob/main/slide/sc3.png)
+![sc1](https://github.com/MyoungchulK/Sound_To_Symphony_LeWgon/blob/main/slide/sc1.png)
+![sc2](https://github.com/MyoungchulK/Sound_To_Symphony_LeWgon/blob/main/slide/sc2.png)
+![sc3](https://github.com/MyoungchulK/Sound_To_Symphony_LeWgon/blob/main/slide/sc3.png)
    
 
 ## Getting Started
