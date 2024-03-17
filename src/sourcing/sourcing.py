@@ -41,7 +41,8 @@ def load_midi_files(data_dir, num_files):
 
 def create_sequences(dataset: tf.data.Dataset, seq_length: int, vocab_size=128) -> tf.data.Dataset:
     """Returns TF Dataset of sequence and label examples."""
-    seq_length = seq_length + 1
+
+    seq_length += 1
 
     key_order = ['pitch', 'step', 'duration']
 
