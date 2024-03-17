@@ -20,8 +20,16 @@ Install gems
 pip install -r requirements.txt
 ```
 
+## Run locally
+In terminal:
+
+```
+cd ~/{your_file_path}/Sound_To_Symphony_LeWgon/streamlit/
+make streamlit app
+```
+
 ## Acknowledgements
-Inspired by Jane Mount's [Bibliophile](https://www.amazon.com/Bibliophile-Illustrated-Miscellany-Jane-Mount/dp/1452167230) and a story my father once told me: "Why do we keep books? ... We keep books because they remind us of the new perspectives and lessons we learned".
+- Heavily inspired by [Generate music with an RNN](https://www.tensorflow.org/tutorials/audio/music_generation) website. 
 
 ## Team Members
 - Nathan H. Arnett
