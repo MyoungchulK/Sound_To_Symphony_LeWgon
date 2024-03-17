@@ -1,5 +1,6 @@
 # 📚 Sound to Symphony (AI Music Generation)
 
+- Under cleaning at this point. Pls bare with me until I finish mopping.
 - Generates completely new music by Recurrent Neural Network (RNN) that can be easily customizable by musical software
 - Architectures RNN model for learning musica lpatterns from large classical music datasets that are expressed in numerical format.
 - Deplyed the project into the Streamlit by utilizing FastAPI
