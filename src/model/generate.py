@@ -28,3 +28,41 @@ def predict_next_note(
   duration = tf.maximum(0, duration)
 
   return int(pitch), float(step), float(duration)
+
+def generate_notes_from_midi_file(self, sample_file, key     ='C_phrygian_major', seq_length=25 ,vocab_size = 128, temper     ature = 2.0, num_predictions = 120):
+    """ save as midi"""
+    
+    raw_notes = midi_to_notes(sample_file)
+    sample_notes = np.stack([raw_notes[key] for key in s     elf.key_order], axis=1)
+
+    # The initial sequence of notes; pitch is normalized      similar to training
+    input_notes = (sample_notes[:seq_length] / np.array([vocab_size     , 1, 1]))
+
+    generated_notes = []
+    prev_start = 0
+    for _ in range(num_predictions):
+        pitch, step, duration = self._predict_next_note(input_notes, temperature)
+        start = prev_start + step
+        end = start + duration
+
+        #adjust to the key you want
+        pitch = self._adjust_pitch_to_scale(pitch, key=key)
+
+        input_note = (pitch, step, duration)
+        generated_notes.append((*input_note, start, end))
+
+        input_notes = np.delete(input_notes, 0, axis=0)
+        input_notes = np.append(input_notes, np.expand_dims(input_note, 0), axis=0)
+        prev_start = start
+    
+        generated_notes = pd.DataFrame(generated_notes, columns=(*self.key_order, 'start', 'end'))
+        
+        return generated_notes
+
+
+
+
+
+
+
+
